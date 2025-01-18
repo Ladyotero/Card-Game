@@ -1,18 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Card Game</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%; 
+            margin: 0;
+            background-color: antiquewhite;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+
+         #memoryCard {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-gap: 10px;
+        }
+
+        .card {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .card.matched {
+            background-color: #5900ff;
+            opacity: 0.5;
+            color: black;
+        }
+        .card.flipped {
+            background-color: #5900ff;
+            color:black;
+            cursor:default;
+        }
+    </style>
 </head>
 <body>
-    <h1>Memory Card Game</h1>
-    <div id="game-board">
-       <!-- Game board will be populated dynamically -->
+    <div id="memoryCard"></div> 
+    <script src="card_game.js"></script>
 
-       <!-- Add more for the grid game-->
-    </div>
-    <script src="script.js"></script>   
 </body>
+
 </html>
